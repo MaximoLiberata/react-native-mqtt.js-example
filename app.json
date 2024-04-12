@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "app",
+    "slug": "app",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "splash": {
+      "resizeMode": "contain"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
+  }
+}

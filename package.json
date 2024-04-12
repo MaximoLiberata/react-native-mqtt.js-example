@@ -1,0 +1,35 @@
+{
+  "name": "mqtt-app-example",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "tunel": "npx expo start -c --tunnel",
+    "android-build": "eas build -p android --profile preview",
+    "ios-build": "eas build -p ios --profile preview"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "1.21.0",
+    "@react-navigation/native": "6.1.17",
+    "@react-navigation/native-stack": "6.9.26",
+    "buffer": "6.0.3",
+    "expo": "50.0.15",
+    "expo-crypto": "12.8.1",
+    "expo-status-bar": "1.11.1",
+    "expo-updates": "0.24.12",
+    "mqtt": "5.5.2",
+    "react": "18.2.0",
+    "react-native": "0.73.6",
+    "react-native-gesture-handler": "~2.14.0",
+    "react-native-reanimated": "~3.6.2",
+    "url": "0.11.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.24.4",
+    "babel-plugin-module-resolver": "5.0.0"
+  },
+  "private": true
+}
