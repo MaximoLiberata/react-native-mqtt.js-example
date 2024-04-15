@@ -74,7 +74,7 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
 
 ## How to use MQTT.js in your React Native project?
 
-React Native (RN) doesn't support some technologies as web browsers does, in RN the mqtt client always will connect from a `WebSocket` instance, for that reason you need some extra packages to make it work. Here is a list of the packages that you need to install to make it work:
+React Native (RN) doesn't support some technologies as web browsers does, in RN the mqtt client always will be established from a `WebSocket` instance, for that reason you need some extra packages to make it work. Here is a list of the packages that you need to install to make it work:
 
 - [url](https://www.npmjs.com/package/url)
 - [buffer](https://www.npmjs.com/package/buffer)
