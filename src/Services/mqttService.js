@@ -70,8 +70,7 @@ function createMqttClient({
 		setMqttStatus('Disconnected')
 	})
 	.on('message', (topic, message, packet) => {
-		const formatTopic = topic.split('/').at(-1)
-		onMessage(formatTopic, message)
+		onMessage(topic, message)
 	})
 
 
