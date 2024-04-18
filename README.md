@@ -86,7 +86,7 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
         <td><code>EXPO_PUBLIC_MQTT_TOPICS<code></td>
         <td>string</td>
         <td>MQTT Broker Topics separated by comma <code>,</code></td>
-        <td>topic/1 | topic/1,topic/2 | match/#</td>
+        <td>topic/1 | topic/1,topic/2 | topic/#</td>
     </tr>
 </table>
 
