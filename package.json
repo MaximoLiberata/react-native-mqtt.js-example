@@ -16,7 +16,7 @@
     "@react-navigation/native": "6.1.17",
     "@react-navigation/native-stack": "6.9.26",
     "buffer": "6.0.3",
-    "expo": "50.0.15",
+    "expo": "~50.0.17",
     "expo-crypto": "12.8.1",
     "expo-status-bar": "1.11.1",
     "expo-updates": "0.24.12",

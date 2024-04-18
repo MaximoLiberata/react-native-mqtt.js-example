@@ -3,6 +3,17 @@
 This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.js) in a React Native project. This example also is using [Expo](https://expo.dev/) to make it easier to run the project.
 
 
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Config MQTT.js in React Native](#config-mqtt.js-in-react-native)
+- [About important files](#about-important-files)
+- [Contributing](#contributing)
+
+
+<a name="getting-started"></a>
+
 ## Getting Started
 
 1. Clone this repository
@@ -12,6 +23,8 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
 5. Open the project in your device using the [Expo Go APP](https://play.google.com/store/apps/details?id=host.exp.exponent) reading the QR code that will appear in the terminal.
 6. Publish a message from your MQTT Broker
 
+
+<a name="environment-variables"></a>
 
 ## Environment Variables
 <table>
@@ -52,6 +65,12 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
         <td>true | false</td>
     </tr>
     <tr>
+        <td><code>EXPO_PUBLIC_MQTT_QOS</code></td>
+        <td>number</td>
+        <td>MQTT Broker Quality of Service</td>
+        <td>0 | 1 | 2</td>
+    </tr>
+    <tr>
         <td><code>EXPO_PUBLIC_MQTT_USERNAME<code></td>
         <td>string</td>
         <td>MQTT Broker Username</td>
@@ -72,7 +91,9 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
 </table>
 
 
-## How to use MQTT.js in your React Native project?
+<a name="config-mqtt.js-in-react-native"></a>
+
+## Config MQTT.js in React Native
 
 React Native (RN) doesn't support some technologies as web browsers does, in RN the mqtt client always will be established from a `WebSocket` instance, for that reason you need some extra packages to make it work. Here is a list of the packages that you need to install to make it work:
 
@@ -87,6 +108,8 @@ process.nextTick = (callback) => {
 }
 ```
 
+
+<a name="about-important-files"></a>
 
 ## About important files
 <table>
@@ -109,6 +132,8 @@ process.nextTick = (callback) => {
 
 I was looking for a simple example of how to use MQTT.js in a React Native project, but I couldn't find any. So I decided to create this example to help others that are looking for the same thing. In the process I found a issue with the `mqtt` package that I had to fix, the PR is in [(#1840)](https://github.com/mqttjs/MQTT.js/pull/1840) if you want to check it out.
 
+
+<a name="contributing"></a>
 
 ## Contributing
 

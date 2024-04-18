@@ -9,7 +9,7 @@ const MttqScreen = () => {
 	const { mqttClient, mqttData, mqttStatus, mqttError, subscribeToTopic } = useMqtt()
 
 	useEffect(() => {
-		subscribeToTopic(envConfig.MQTT_TOPICS, { qos: 1 })
+		subscribeToTopic(envConfig.MQTT_TOPICS, { qos: envConfig.MQTT_QOS })
 	}, [])
 
 

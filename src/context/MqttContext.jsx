@@ -3,6 +3,10 @@ import useAppStateBackground from 'src/hooks/useAppStateReconnect'
 import useMqttConnection from 'src/hooks/useMqttConnection'
 
 
+/**
+ * @typedef {(topics: string[], options?: { qos: 0 | 1 | 2 }) => void} SubscribeToTopic
+ */
+
 const MqttContext = createContext(null)
 
 export const MqttProvider = ({ children }) => {
@@ -12,17 +16,24 @@ export const MqttProvider = ({ children }) => {
 
 	useAppStateBackground(mqttClient)
 
+	/**
+	 * @type {SubscribeToTopic}
+	 */
 	const subscribeToTopic = (topics, { qos = 1 } = {}) => {
+
 		if (!mqttClient) return
 
-		topics.map((topic) =>
-			mqttClient.subscribe(topic, { qos }, (error) => {
+		for (const topic of topics) {
+
+			mqttClient.subscribe(topic, { qos }, (error, granted) => {
 				if (error) {
-					setMqttStatus('Subscribe Error')
+					setMqttStatus(`TopicError: ${topic}`);
 					setMqttError(`Name: ${error?.name}\nMessage: ${error?.message}\nCode: ${error?.code}`)
 				}
-			})
-		)
+			});
+
+		}
+
 	}
 
 
@@ -43,4 +54,14 @@ export const MqttProvider = ({ children }) => {
 
 }
 
+
+/**
+ * @type {{() => {
+ * 	mqttClient: import('src/hooks/useMqttConnection').MqttClient,
+ * 	mqttData: import('src/hooks/useMqttConnection').MqttData,
+ * 	mqttStatus: import('src/hooks/useMqttConnection').MqttStatus,
+ * 	mqttError: import('src/hooks/useMqttConnection').MqttError,
+ * 	subscribeToTopic: SubscribeToTopic,
+ * }}}
+ */
 export const useMqtt = () => useContext(MqttContext)
