@@ -4,10 +4,6 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import Navigation from './src/navigator/Navigation'
 import { MqttProvider } from 'src/context/MqttContext'
 
-// For MQTT.js library
-process.nextTick = (callback) => {
-	setTimeout(callback, 0)
-}
 
 export default function App() {
 
