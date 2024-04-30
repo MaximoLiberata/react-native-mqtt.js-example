@@ -100,14 +100,6 @@ React Native (RN) doesn't support some technologies as web browsers does, in RN 
 - [url](https://www.npmjs.com/package/url)
 - [buffer](https://www.npmjs.com/package/buffer)
 
-Also some packages of `mqtt` library use `process.nextTick` function, to prevent errors with those packages you need to add the following line of code to your entry file (in this project is `App.js`):
-
-```
-process.nextTick = (callback) => {
-    setTimeout(callback, 0)
-}
-```
-
 
 <a name="about-important-files"></a>
 
