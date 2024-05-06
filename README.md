@@ -44,7 +44,7 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
         <td><code>EXPO_PUBLIC_MQTT_HOST<code></td>
         <td>string</td>
         <td>MQTT Broker Host</td>
-        <td>localhost | domin.com</td>
+        <td>localhost | domain.com</td>
     </tr>
     <tr>
         <td><code>EXPO_PUBLIC_MQTT_PORT<code></td>
@@ -63,6 +63,18 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
         <td>boolean</td>
         <td>Enable connection via SSL</td>
         <td>true | false</td>
+    </tr>
+    <tr>
+        <td><code>EXPO_PUBLIC_MQTT_VERSION</code></td>
+        <td>number</td>
+        <td>MQTT Protocol Version</td>
+        <td>
+            <code>3</code> = 3.1
+            </br>
+            <code>4</code> = 3.1.1
+            </br>
+            <code>5</code> = 5
+        </td>
     </tr>
     <tr>
         <td><code>EXPO_PUBLIC_MQTT_QOS</code></td>
