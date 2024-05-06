@@ -35,31 +35,31 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
         <th>Example</th>
     </tr>
     <tr>
-        <td><code>EXPO_PUBLIC_TZ<code></td>
+        <td><code>EXPO_PUBLIC_TZ</code></td>
         <td>string</td>
         <td>Timezone will be used to format the date</td>
         <td>UTC | America/Santo_Domingo</td>
     </tr>
     <tr>
-        <td><code>EXPO_PUBLIC_MQTT_HOST<code></td>
+        <td><code>EXPO_PUBLIC_MQTT_HOST</code></td>
         <td>string</td>
         <td>MQTT Broker Host</td>
         <td>localhost | domain.com</td>
     </tr>
     <tr>
-        <td><code>EXPO_PUBLIC_MQTT_PORT<code></td>
+        <td><code>EXPO_PUBLIC_MQTT_PORT</code></td>
         <td>number</td>
         <td>MQTT Broker Port</td>
         <td>1883</td>
     </tr>
     <tr>
-        <td><code>EXPO_PUBLIC_MQTT_PORT_SSL<code></td>
+        <td><code>EXPO_PUBLIC_MQTT_PORT_SSL</code></td>
         <td>number</td>
         <td>MQTT Broker SSL Port</td>
         <td>8883</td>
     </tr>
     <tr>
-        <td><code>EXPO_PUBLIC_MQTT_SSL<code></td>
+        <td><code>EXPO_PUBLIC_MQTT_SSL</code></td>
         <td>boolean</td>
         <td>Enable connection via SSL</td>
         <td>true | false</td>
@@ -83,19 +83,19 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
         <td>0 | 1 | 2</td>
     </tr>
     <tr>
-        <td><code>EXPO_PUBLIC_MQTT_USERNAME<code></td>
+        <td><code>EXPO_PUBLIC_MQTT_USERNAME</code></td>
         <td>string</td>
         <td>MQTT Broker Username</td>
         <td>producer | consumer</td>
     </tr>
     <tr>
-        <td><code>EXPO_PUBLIC_MQTT_PASSWORD<code></td>
+        <td><code>EXPO_PUBLIC_MQTT_PASSWORD</code></td>
         <td>string</td>
         <td>MQTT Broker Password</td>
         <td>123 | 456</td>
     </tr>
     <tr>
-        <td><code>EXPO_PUBLIC_MQTT_TOPICS<code></td>
+        <td><code>EXPO_PUBLIC_MQTT_TOPICS</code></td>
         <td>string</td>
         <td>MQTT Broker Topics separated by comma <code>,</code></td>
         <td>topic/1 | topic/1,topic/2 | topic/#</td>
