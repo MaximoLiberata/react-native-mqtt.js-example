@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from 'react'
 import useAppStateBackground from 'src/hooks/useAppStateReconnect'
 import useMqttConnection from 'src/hooks/useMqttConnection'
+import { emitStateError } from 'src/Services/errorHandler'
 
 
 /**
@@ -27,8 +28,8 @@ export const MqttProvider = ({ children }) => {
 
 			mqttClient.subscribe(topic, { qos }, (error, granted) => {
 				if (error) {
-					setMqttStatus(`TopicError: ${topic}`);
-					setMqttError(`Name: ${error?.name}\nMessage: ${error?.message}\nCode: ${error?.code}`)
+					setMqttStatus('Error');
+					emitStateError(setMqttError, 'MqttTopic', error);
 				}
 			});
 

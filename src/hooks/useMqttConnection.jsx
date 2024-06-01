@@ -3,11 +3,11 @@ import { createMqttClient } from 'src/Services/mqttService'
 
 
 /**
- * @typedef {'Connected' | 'Disconnected' | 'Offline' | 'Reconnecting' | `TopicError: ${string}` | 'Error'} MqttStatus 
+ * @typedef {'Connected' | 'Disconnected' | 'Offline' | 'Reconnecting' | 'Error'} MqttStatus 
  */
 
 /**
- * @typedef {string} MqttError
+ * @typedef {{ type: string, msg: string }} MqttError
  */
 
 /**
@@ -21,22 +21,22 @@ import { createMqttClient } from 'src/Services/mqttService'
 function useMqttConnection(doMqttConnection) {
 
 	/**
-	 * @type [MqttStatus, React.Dispatch<any>]
+	 * @type [MqttStatus, React.Dispatch<MqttStatus>]
 	 */
 	const [mqttStatus, setMqttStatus] = useState('Disconnected')
 
 	/**
-	 * @type [MqttError, React.Dispatch<any>]
+	 * @type [MqttError, React.Dispatch<MqttError>]
 	 */
-	const [mqttError, setMqttError] = useState(null)
+	const [mqttError, setMqttError] = useState({})
 
 	/**
-	 * @type [MqttData, React.Dispatch<any>]
+	 * @type [MqttData, React.Dispatch<MqttData>]
 	 */
 	const [mqttData, setMqttData] = useState({})
 
 	/**
-	 * @type [MqttClient, React.Dispatch<any>]
+	 * @type [MqttClient, React.Dispatch<MqttClient>]
 	 */
 	const [mqttClient, setMqttClient] = useState(null)
 

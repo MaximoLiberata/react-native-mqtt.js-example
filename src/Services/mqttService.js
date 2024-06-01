@@ -1,11 +1,12 @@
 import mqtt from 'mqtt'
 import { envConfig } from 'src/config/environment'
+import { emitStateError } from './errorHandler'
 
 
 /**
  * @typedef {{
  * 	ssl: boolean,
- * 	setMqttStatus: (status: string) => void,
+ * 	setMqttStatus: (status: import('../hooks/useMqttConnection').MqttStatus) => void,
  *  setMqttError: (error: string) => void,
  *  uniqueId: string,
  * 	onMessage: (topic: string, message: any) => void,
@@ -58,7 +59,7 @@ function createMqttClient({
 	})
 	.on('error', (error) => {
 		setMqttStatus('Error')
-		setMqttError(`Name: ${error?.name}\nMessage: ${error?.message}\nCode: ${error?.code}`)
+		emitStateError(setMqttError, 'MqttGeneral', error)
 	})
 	.on('disconnect', (packet) => {
 		setMqttStatus('Disconnected')

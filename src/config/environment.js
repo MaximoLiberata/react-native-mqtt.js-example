@@ -10,6 +10,7 @@ const envConfig = {
   MQTT_USERNAME: (process.env.EXPO_PUBLIC_MQTT_USERNAME ?? '').length === 0 ? undefined : process.env.EXPO_PUBLIC_MQTT_USERNAME,
   MQTT_PASSWORD: (process.env.EXPO_PUBLIC_MQTT_PASSWORD ?? '').length === 0 ? undefined : process.env.EXPO_PUBLIC_MQTT_PASSWORD,
   MQTT_TOPICS: typeof process.env.EXPO_PUBLIC_MQTT_TOPICS === 'string' ? process.env.EXPO_PUBLIC_MQTT_TOPICS.split(',') : [],
+  EMIT_CONSOLE_LOGS: process.env.EXPO_PUBLIC_EMIT_CONSOLE_LOGS === 'true',
 }
 
 

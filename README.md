@@ -41,6 +41,12 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
         <td>UTC | America/Santo_Domingo</td>
     </tr>
     <tr>
+        <td><code>EXPO_PUBLIC_EMIT_CONSOLE_LOGS</code></td>
+        <td>boolean</td>
+        <td>Show in console all error logs</td>
+        <td>true | false</td>
+    </tr>
+    <tr>
         <td><code>EXPO_PUBLIC_MQTT_HOST</code></td>
         <td>string</td>
         <td>MQTT Broker Host</td>
