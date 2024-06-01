@@ -35,10 +35,12 @@ function createMqttClient({
 		protocol = 'wss'
 	}
 
-	const client = mqtt.connect(`${protocol}://${host}${path}`, {
-		port,
-		protocolVersion,
+	const client = mqtt.connect({
 		protocol,
+        host,
+        port,
+        path,
+        protocolVersion,
 		clientId: uniqueId,
 		username: envConfig.MQTT_USERNAME,
 		password: envConfig.MQTT_PASSWORD,

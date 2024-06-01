@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
+    "name": "mqtt-example",
+    "slug": "mqtt-example",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.0.0",
+    "version": "1.3.0",
     "orientation": "portrait",
     "splash": {
       "resizeMode": "contain"
