@@ -7,6 +7,7 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
 
 - [Getting Started](#getting-started)
 - [Environment Variables](#environment-variables)
+  - [Example Mosquitto Broker](#example-mosquitto-broker)
 - [Config MQTT.js in React Native](#config-mqtt.js-in-react-native)
 - [About important files](#about-important-files)
 - [Contributing](#contributing)
@@ -107,6 +108,27 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
         <td>topic/1 | topic/1,topic/2 | topic/#</td>
     </tr>
 </table>
+
+### Example Mosquitto Broker
+
+[Mosquitto Test Server Configuration](https://test.mosquitto.org/)
+
+```
+# APP
+EXPO_PUBLIC_TZ = "UTC"
+EXPO_PUBLIC_EMIT_CONSOLE_LOGS = true
+
+# MQTT
+EXPO_PUBLIC_MQTT_HOST     = "test.mosquitto.org"
+EXPO_PUBLIC_MQTT_PORT     = 8080
+EXPO_PUBLIC_MQTT_PORT_SSL = 8081
+EXPO_PUBLIC_MQTT_SSL      = true
+EXPO_PUBLIC_MQTT_VERSION  = 4
+EXPO_PUBLIC_MQTT_QOS      = 0
+EXPO_PUBLIC_MQTT_USERNAME = ""
+EXPO_PUBLIC_MQTT_PASSWORD = ""
+EXPO_PUBLIC_MQTT_TOPICS   = "#"
+```
 
 
 <a name="config-mqtt.js-in-react-native"></a>
