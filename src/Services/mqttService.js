@@ -19,12 +19,12 @@ import { emitStateError } from './errorHandler'
  * @returns {mqtt.MqttClient} 
  */
 function createMqttClient({
-	ssl = true,
 	setMqttStatus,
 	setMqttError,
 	uniqueId,
 	onMessage,
 }) {
+	const ssl = envConfig.MQTT_SSL
 	const host = envConfig.MQTT_HOST
 	const path = '/ws'
 	const protocolVersion = envConfig.MQTT_VERSION
