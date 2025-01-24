@@ -52,7 +52,8 @@ function createMqttClient({
 		keepalive: 30,
 		properties: protocolVersion === 5 ? {
 			sessionExpiryInterval: 600
-		} : undefined
+		} : undefined,
+		forceNativeWebSocket: true
 	})
 	.on('connect', () => {
 		setMqttStatus('Connected')
