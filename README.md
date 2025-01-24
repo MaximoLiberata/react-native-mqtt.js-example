@@ -10,6 +10,7 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
   - [Example Mosquitto Broker](#example-mosquitto-broker)
 - [Config MQTT.js in React Native](#config-mqtt.js-in-react-native)
 - [About important files](#about-important-files)
+- [Known Issues](#known-issues)
 - [Contributing](#contributing)
 
 
@@ -159,6 +160,16 @@ React Native (RN) doesn't support some technologies as web browsers does, in RN 
     </tr>
 </table>
 
+
+<a name="known-issues"></a>
+
+## Known Issues
+These are some known issues that you _may_ encounter when using this example.
+
+- **Keepalive timeout**
+    - The app crashes because it gets overwhelmed with the thousands of messages coming from broker, e.g. using mosquitto broker with `#` topic.
+
+If you find any solution to these issues, feel free to open a PR, look at the [Contributing](#contributing) section for more information.
 
 ## Motivation
 
