@@ -15,23 +15,26 @@
     "node": ">=20.14.0"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~4.0.1",
     "@react-native-async-storage/async-storage": "1.23.1",
     "@react-navigation/native": "6.1.17",
     "@react-navigation/native-stack": "6.9.26",
     "buffer": "6.0.3",
-    "expo": "~51.0.28",
-    "expo-crypto": "~13.0.2",
-    "expo-status-bar": "~1.12.1",
-    "expo-updates": "~0.25.22",
+    "expo": "~52.0.26",
+    "expo-crypto": "~14.0.2",
+    "expo-status-bar": "~2.0.1",
+    "expo-updates": "~0.26.13",
     "mqtt": "5.10.0",
-    "react": "18.2.0",
-    "react-native": "0.74.5",
-    "react-native-gesture-handler": "~2.16.2",
-    "react-native-reanimated": "~3.10.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-native": "0.76.6",
+    "react-native-gesture-handler": "~2.20.2",
+    "react-native-reanimated": "~3.16.1",
+    "react-native-web": "~0.19.13",
     "url": "0.11.3"
   },
   "devDependencies": {
-    "@babel/core": "7.24.6",
+    "@babel/core": "7.25.2",
     "babel-plugin-module-resolver": "5.0.2"
   },
   "private": true
