@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+# dependencie files
+pnpm-lock.yaml
+
 # Expo
 .expo/
 dist/
