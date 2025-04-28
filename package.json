@@ -18,7 +18,7 @@
     "@expo/metro-runtime": "~4.0.1",
     "@react-navigation/native": "7.1.6",
     "@react-navigation/native-stack": "7.3.10",
-    "expo": "~52.0.44",
+    "expo": "~52.0.46",
     "expo-crypto": "~14.0.2",
     "expo-status-bar": "~2.0.1",
     "expo-updates": "~0.27.4",
