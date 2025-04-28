@@ -139,14 +139,6 @@ EXPO_PUBLIC_MQTT_TOPICS   = "#"
 
 ## Using MQTT.js in React Native
 
-Use the following import statement to import MQTT.js in your React Native project:
-
-```javascript
-import mqtt from 'mqtt/dist/mqtt.esm.js';
-```
-
-Alternatively, if you want to use the default import, you can follow these steps:
-
 1. Configure the `metro.config.js` file to use the `mqtt` package as a default import.
 
 ```javascript
@@ -164,6 +156,12 @@ module.exports = config;
 2. Import the `mqtt` package:
 ```javascript
 import mqtt from 'mqtt';
+```
+
+Alternatively, if you don't want to use default import and metro config file, you can use the following import statement:
+
+```javascript
+import mqtt from 'mqtt/dist/mqtt.esm.js';
 ```
 
 
