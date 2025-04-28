@@ -8,7 +8,7 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
 - [Getting Started](#getting-started)
 - [Environment Variables](#environment-variables)
   - [Example Mosquitto Broker](#example-mosquitto-broker)
-- [Config MQTT.js in React Native](#config-mqtt.js-in-react-native)
+- [Using MQTT.js in React Native](#using-mqttjs-in-react-native)
 - [About important files](#about-important-files)
 - [Known Issues](#known-issues)
 - [Contributing](#contributing)
@@ -110,6 +110,9 @@ This is a simple example of how to use [MQTT.js](https://github.com/mqttjs/MQTT.
     </tr>
 </table>
 
+
+<a name="example-mosquitto-broker"></a>
+
 ### Example Mosquitto Broker
 
 [Mosquitto Test Server Configuration](https://test.mosquitto.org/)
@@ -132,14 +135,34 @@ EXPO_PUBLIC_MQTT_TOPICS   = "#"
 ```
 
 
-<a name="config-mqtt.js-in-react-native"></a>
+<a name="using-mqttjs-in-react-native"></a>
 
-## Config MQTT.js in React Native
+## Using MQTT.js in React Native
 
-React Native (RN) doesn't support some technologies as web browsers does, in RN the mqtt client always will be established from a `WebSocket` instance, for that reason you need some extra packages to make it work. Here is a list of the packages that you need to install to make it work:
+1. Configure the `metro.config.js` file to use the `mqtt` package as a default import.
 
-- [url](https://www.npmjs.com/package/url)
-- [buffer](https://www.npmjs.com/package/buffer)
+```javascript
+const { getDefaultConfig } = require('expo/metro-config');
+
+const config = getDefaultConfig(__dirname);
+
+config.resolver.unstable_enablePackageExports = true;
+
+module.exports = config;
+```
+
+<em>Note: `unstable_enablePackageExports` will be removed in the future when it stabilizes, so be sure to check the [Expo documentation](https://reactnative.dev/blog/2023/06/21/package-exports-support) and follow the latest updates.</em>
+
+2. Import the `mqtt` package:
+```javascript
+import mqtt from 'mqtt';
+```
+
+Alternatively, if you don't want to use default import and metro config file, you can use the following import statement:
+
+```javascript
+import mqtt from 'mqtt/dist/mqtt.esm.js';
+```
 
 
 <a name="about-important-files"></a>
