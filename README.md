@@ -139,7 +139,7 @@ EXPO_PUBLIC_MQTT_TOPICS   = "#"
 
 ## Using MQTT.js in React Native
 
-1. Configure the `metro.config.js` file to use the `mqtt` package as a default import.
+1. If you are using Expo SDK v53 or below, configure the `metro.config.js` file to use the `mqtt` package as a default import.
 
 ```javascript
 const { getDefaultConfig } = require('expo/metro-config');
@@ -151,7 +151,7 @@ config.resolver.unstable_enablePackageExports = true;
 module.exports = config;
 ```
 
-<em>Note: `unstable_enablePackageExports` will be removed in the future when it stabilizes, so be sure to check the [Expo documentation](https://reactnative.dev/blog/2023/06/21/package-exports-support) and follow the latest updates.</em>
+<em>Note: Starting from Expo SDK v54, `unstable_enablePackageExports` is no longer required.</em>
 
 2. Import the `mqtt` package:
 ```javascript
@@ -190,7 +190,7 @@ import mqtt from 'mqtt/dist/mqtt.esm.js';
 These are some known issues that you _may_ encounter when using this example.
 
 - **Keepalive timeout**
-    - The app crashes because it gets overwhelmed with the thousands of messages coming from broker, e.g. using mosquitto broker with `#` topic.
+    - The app may crash because it becomes overwhelmed by the thousands of messages coming from the broker, for example when using mosquitto broker with `#` topic.
 
 If you find any solution to these issues, feel free to open a PR, look at the [Contributing](#contributing) section for more information.
 
