@@ -6,7 +6,6 @@ import { COLORS } from 'src/constants/Colors'
 const Stack = createNativeStackNavigator()
 
 const stackOptions = {
-	// headerShown: false,
 	headerStyle: {
 		backgroundColor: COLORS.bg,
 	},
